@@ -27,26 +27,52 @@ _(*) You might need to insert a `!` before your command when running terminal co
   `search_df.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
   `bulk_photo_detail.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
 
+## Limitations
+- Support photo and video searches: 
+  - Photo Search (Non-Editorial and Editorial)
+  - Video Creative Search. Skip Editorial Video search.
+
+- Need to avoid abusing the API, which might lead to the service provider blocking the bot traffic.
+
 # III. APENDICES
-- Default photo search query: 
-```https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang```
 
+## Photo search query structure:
   <details>
-  <summary>Default Search UI</summary>
+    <summary>Default photo search</summary>
 
-    ![default_search](./src/shutter_stock_default_photo_search_ui.png)
+  ```https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang```
+
+  Default Search UI:
+
+  ![default_search](./src/shutter_stock_default_photo_search_ui.png)
 
   </details>
 
-- Advanced photo search query: 
-```https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang&page=2&&contributor=Big+Pearl&category=Nature&sort=newest&release=editorial&mreleased=true&exclude=car%2C+bike&artistsInclude=VN&authentic=true```
-
   <details>
-    <summary>Advanced Search UI</summary>
+    <summary>Advanced photo search</summary>
 
-    ![advanced_search](./src/shutter_stock_advanced_photo_search_ui.png)
+  ```https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang&page=2&&contributor=Big+Pearl&category=Nature&sort=newest&release=editorial&mreleased=true&exclude=car%2C+bike&artistsInclude=VN&authentic=true```
+
+  Advanced Search UI
+
+  ![advanced_search](./src/shutter_stock_advanced_photo_search_ui.png)
       
   </details>
+
+## Video creative search query structure
+<details>
+  <summary>Default Video search</summary>
+  
+  ```https://www.shutterstock.com/_next/data/qaf5FoOwtgZ0aXCZ3JlVY/en/_shutterstock/video/search/ha-giang.json?term=ha-giang```
+
+</details>
+
+<details>
+  <summary>Advanced Video Creative search</summary>
+  
+  ```https://www.shutterstock.com/_next/data/qaf5FoOwtgZ0aXCZ3JlVY/en/_shutterstock/video/search/ha-giang.json?term=ha-giang&page=2&sort=newest&res=4k&aspect_ratio=16%3A9&duration=0-90&fps=30&mreleased=true&people_number=2&contributor=bui+minh+vu&artistsInclude=VN&exclude=car%2C+bike&release=editorial&category=Nature&safe=off```
+
+</details>
 
 # IV. 🙋‍♂️ CONTACT INFORMATION
 You can contact me at one of my social network profiles:
