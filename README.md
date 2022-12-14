@@ -1,5 +1,9 @@
 # shutterstock_analysis
-Analyze Shutterstock insights for photo licensing
+> The internet's first python package supports analyzing the Shutterstock public data, which helps creators optimize their creative portfolio and earn more income with less effort.
+
+`shutterstock_analysis` relies on public APIs, similar to how you use the web browser to access Shutterstock service to provide you the underlay insights. It is **FREE** and has **NO LIMITATIONS**. 
+
+You can support this project on Patreon (or Momo in Vietnam) based on how you feel it is helpful. Scroll the end of this page for more details.
 
 <div>
   <img src="https://img.shields.io/pypi/pyversions/shutterstock_analysis?logoColor=brown&style=plastic" alt= "Version"/>
@@ -7,6 +11,8 @@ Analyze Shutterstock insights for photo licensing
   <img src="https://img.shields.io/github/last-commit/thinh-vu/shutterstock_analysis" alt="Commit Badge"/>
   <img src="https://img.shields.io/github/license/thinh-vu/shutterstock_analysis?color=red" alt="License Badge"/>
 </div>
+
+---
 
 # II. REFERENCES
 ## 2.1. How to use this package?
@@ -18,14 +24,35 @@ _(*) You might need to insert a `!` before your command when running terminal co
 
 - To start using functions, you need to import them: `from shutterstock_analysis import *`
 
-## Function references
-- Get multiple pages of search results:
-  search_df = `search_results('ha giang', page_limit=10)`
+## 2.2. Function references
+
+> You can also read the function suggestion on your IDE which loads the documentation from the doc string. It's fairly simple, trust me!
+
+### 2.2.1. Image search
+- Get image search results from multiple Shutterstock result pages:
+  
+   `search_df = image_search('ha giang', page_limit=10)`
+
 - Get bulk photos details:
-  bulk_photo_detail = `bulk_photo_detail(search_df, limit=100)`
-- Export data:
-  `search_df.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
-  `bulk_photo_detail.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
+
+  `bulk_photo_detail = bulk_photo_detail(search_df, limit=100)`
+
+### 2.2.2. Creative video search
+> Although the data for the Editorial video is available, I decided to skip that option since it's not practical for my use case. Do feel free to develop it on your own if it's needed.
+
+- Get video search results from multiple Shutterstock result pages:
+  
+  `search_df = image_search('ha giang', page_limit=10)`
+
+- Get bulk videos details:
+  
+  `bulk_photo_detail = bulk_photo_detail(search_df, limit=100)`
+
+### 2.2.3. Export data:
+- This is the simplest way to export data from python to a CSV file which you can analyze easily either with Excel or Google Sheets.
+  - Export search results: `search_df.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
+
+  - Export photo details: `bulk_photo_detail.to_csv('YOUR_PATH_TO_FILE.csv', index=False)`
 
 ## Limitations
 - Support photo and video searches: 
@@ -44,7 +71,7 @@ _(*) You might need to insert a `!` before your command when running terminal co
 
   Default Search UI:
 
-  ![default_search](./src/shutter_stock_default_photo_search_ui.png)
+  ![default_search](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutter_stock_default_photo_search_ui.png)
 
   </details>
 
@@ -55,7 +82,7 @@ _(*) You might need to insert a `!` before your command when running terminal co
 
   Advanced Search UI
 
-  ![advanced_search](./src/shutter_stock_advanced_photo_search_ui.png)
+  ![advanced_search](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutter_stock_advanced_photo_search_ui.png)
       
   </details>
 

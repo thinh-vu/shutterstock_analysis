@@ -7,8 +7,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shutterstock_analysis"
-description = "Analyze Shutterstock insights for photo licensing"
-version = "0.0.1"
+description = "The internet's very first python package supports analyzing the Shutterstock public data, which helps creators optimize their creative portfolio and earn more income with less effort."
+version = "0.0.2"
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = []

@@ -11,7 +11,7 @@ def image_search(query, page_limit=1, base_time=3, basic=True):
     Args:
         query (:obj:`str`, required): Search query
         limit (:obj:`int`, optional): Maximum results to extract.
-        base_time (:obj:`str`, required): choose a number of second to generate sleep time between each request.
+        base_time (:obj:`str`, required): choose a number of seconds to generate sleep time between each request.
         base_time (:obj:`str`, required): True to return the simplified DataFrame, False to return all data.
     """
     frac = random.randint(1,17)
@@ -43,7 +43,7 @@ def image_search_url(url):
     """
     Extract search results from the image search.
     Args:
-        url (:obj:`str`, required): url of the image search page. Eg: https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang
+        url (:obj:`str`, required): URL of the image search page. Eg: https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang
     """
     response = ss_api_request(url).json()
     df = json_normalize(response['pageProps']['assets'])
@@ -57,7 +57,7 @@ def video_search(query, page_limit=1, base_time=3, basic=True):
     Args:
         query (:obj:`str`, required): Search query
         limit (:obj:`int`, optional): Maximum results to extract.
-        base_time (:obj:`str`, required): choose a number of second to generate sleep time between each request.
+        base_time (:obj:`str`, required): choose a number of seconds to generate sleep time between each request.
         base_time (:obj:`str`, required): True to return the simplified DataFrame, False to return all data.
     """
     frac = random.randint(0,17)
@@ -109,7 +109,7 @@ def video_search_url(url):
     """
     Extract search results from the Video creative search.
     Args:
-        url (:obj:`str`, required): url of the video search page
+        url (:obj:`str`, required): URL of the video search page
     """
     response = ss_api_request(url).json()
     df = json_normalize(response['pageProps']['videos'])
@@ -123,7 +123,7 @@ def bulk_photo_detail(search_df, limit=10, base_time=3):
     Args:
         search_df (:obj:`str`, required): a DataFrame that returned from `image_search` function
         limit (:obj:`int`, optional): Maximum results to extract.
-        base_time (:obj:`str`, required): choose a number of second to generate sleep time between each request.
+        base_time (:obj:`str`, required): choose a number of seconds to generate sleep time between each request.
     """
     frac = random.randint(1,17)
     delay = base_time/frac    
@@ -146,7 +146,7 @@ def photo_detail(url):
     """
     Extract details info or a specific photo by its url.
     Args:
-        url (:obj:`str`, required): url of the photo detail page. Eg: https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/image-photo/ha-giang-province-northeast-vietnam-1575835303.json?title=ha-giang-province-northeast-vietnam-1575835303
+        url (:obj:`str`, required): URL of the photo detail page. Eg: https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/image-photo/ha-giang-province-northeast-vietnam-1575835303.json?title=ha-giang-province-northeast-vietnam-1575835303
     """
     response = ss_api_request(url).json()
     df = json_normalize(response['pageProps']['asset'])
@@ -159,7 +159,7 @@ def bulk_video_detail(video_df, limit=10, base_time=3):
     Args:
         video_df (:obj:`str`, required): a DataFrame that returned from `video_search` function
         limit (:obj:`int`, optional): Maximum results to extract.
-        base_time (:obj:`str`, required): choose a number of second to generate sleep time between each request.
+        base_time (:obj:`str`, required): choose a number of seconds to generate sleep time between each request.
     """
     frac = random.randint(1,17)
     delay = base_time/frac    
