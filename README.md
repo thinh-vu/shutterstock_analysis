@@ -13,6 +13,8 @@ You can support this project on Patreon (or Momo in Vietnam) based on how you fe
 </div>
 
 ---
+![advanced_search](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutterstock_image_search_ha_giang_hero.png)
+
 
 # II. REFERENCES
 ## 2.1. How to use this package?
@@ -63,7 +65,7 @@ _(*) You might need to insert a `!` before your command when running terminal co
 
 # III. APENDICES
 
-## Photo search query structure:
+## 3.1. Photo search query structure:
   <details>
     <summary>Default photo search</summary>
 
@@ -80,17 +82,21 @@ _(*) You might need to insert a `!` before your command when running terminal co
 
   ```https://www.shutterstock.com/_next/data/abgKsgPYfFDoIqIr0JlX0/en/_shutterstock/search/ha-giang.json?image_type=photo&term=ha-giang&page=2&&contributor=Big+Pearl&category=Nature&sort=newest&release=editorial&mreleased=true&exclude=car%2C+bike&artistsInclude=VN&authentic=true```
 
-  Advanced Search UI
+  Advanced Search UI:
 
   ![advanced_search](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutter_stock_advanced_photo_search_ui.png)
       
   </details>
 
-## Video creative search query structure
+## 3.2. Video creative search query structure
 <details>
   <summary>Default Video search</summary>
   
   ```https://www.shutterstock.com/_next/data/qaf5FoOwtgZ0aXCZ3JlVY/en/_shutterstock/video/search/ha-giang.json?term=ha-giang```
+
+  - Video Creative, default search UI
+
+  ![advanced_video_search](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutterstock_video_search.png)
 
 </details>
 
@@ -98,6 +104,26 @@ _(*) You might need to insert a `!` before your command when running terminal co
   <summary>Advanced Video Creative search</summary>
   
   ```https://www.shutterstock.com/_next/data/qaf5FoOwtgZ0aXCZ3JlVY/en/_shutterstock/video/search/ha-giang.json?term=ha-giang&page=2&sort=newest&res=4k&aspect_ratio=16%3A9&duration=0-90&fps=30&mreleased=true&people_number=2&contributor=bui+minh+vu&artistsInclude=VN&exclude=car%2C+bike&release=editorial&category=Nature&safe=off```
+
+</details>
+
+## 3.3. Media details
+
+<details>
+  <summary>Photo details view</summary>
+  
+  ```https://www.shutterstock.com/_next/data/C9XIXNeuNSgmiYo-YdBAv/en/_shutterstock/image-photo/ha-giang-province-northeast-vietnam-1575835303.json?title=ha-giang-province-northeast-vietnam-1575835303```
+
+  ![photo_details](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutterstock_image_details.png)
+
+</details>
+
+<details>
+  <summary>Video details view</summary>
+  
+  ```https://www.shutterstock.com/_next/data/C9XIXNeuNSgmiYo-YdBAv/en/_shutterstock/video/clip-1053358490-terraced-rice-field-ha-giang-province-vietnam.json?slug=clip-1053358490-terraced-rice-field-ha-giang-province-vietnam```
+
+  ![photo_details](https://raw.githubusercontent.com/thinh-vu/shutterstock_analysis/main/src/shutterstock_video_details.png)
 
 </details>
 
