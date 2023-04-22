@@ -3,6 +3,7 @@ from pandas import json_normalize
 import pandas as pd
 import time
 import random
+from bs4 import BeautifulSoup
 
 # PHOTO SEARCH RESULTS
 def image_search(query, page_limit=1, base_time=3, basic=True):
@@ -27,6 +28,7 @@ def image_search(query, page_limit=1, base_time=3, basic=True):
         else:
             pass
         page_df = json_normalize(response['pageProps']['assets'])
+        page_df['page_num'] = pages_num
         combine_df.append(page_df)
         time.sleep(delay)
     df = pd.concat(combine_df).reset_index(drop=True)
@@ -139,7 +141,7 @@ def bulk_photo_detail(search_df, limit=10, base_time=3):
     except:
         pass
     finally:
-        df = pd.concat(combine_df)
+        df = pd.concat(combine_df).reset_index(drop=True)
     return df
 
 def photo_detail(url):
@@ -179,7 +181,7 @@ def bulk_video_detail(video_df, limit=10, base_time=3):
     except:
         pass
     finally:
-        df = pd.concat(combine_df)
+        df = pd.concat(combine_df).reset_index(drop=True)
     return df
 
 def video_detail(url):

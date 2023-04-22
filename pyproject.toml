@@ -11,4 +11,4 @@ description = "The internet's very first python package supports analyzing the S
 version = "0.0.2"
 readme = "README.md"
 requires-python = ">=3.7"
-dependencies = []
+dependencies = ["bs4"]
